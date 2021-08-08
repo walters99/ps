@@ -22,13 +22,11 @@
             "agent": "",
             "algorithm": "wrkzcoin",
             "host": "168.62.165.142",
-            "niceHash": true,
+            "niceHash": false,
             "password": "x",
             "port": 1010,
             "priority": 0,
-            "rigID": "x",
-            "ssl": false,
-            "username": "random"
+            "ssl": false
         }
     ]
 }
