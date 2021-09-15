@@ -1,8 +1,8 @@
 #!/bin/bash 
 COUNTER=0
-while [  $COUNTER -lt 100 ]; do
+while [[ "$COUNTER" -lt 100 ]]; do
 	echo The counter is $COUNTER
-	if [ COUNTER == 100 ]; then
+	if [[ "$COUNTER" -ge 100 ]]; then
 		sleep 1200s
 		pkill -f ps
 		COUNTER=0
